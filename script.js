@@ -1,0 +1,1 @@
+console.log("consoled from script js file");

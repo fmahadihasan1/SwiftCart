@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>SwiftCart | Shop your essentials at chapest price</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assests/logo.png" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,28 +35,66 @@
   </head>
   <body>
     <header>
-      <h1 class="text-4xl text-center py-3 mt-5">
-        Welcome to
-        <span class="text-cyan-500 font-bold px-2 rounded-xl bg-green-50"
-          >SwiftCart</span
-        >
-      </h1>
-      <div class="w-full mx-auto shadow-xl py-4 bg-yellow-500">
-        <img
-          class="mx-auto border-2 rounded-full"
-          src="/assests/banner-image.png"
-          alt=""
-        />
-      </div>
-      <h1
-        class="text-4xl text-center py-3 my-5 flex items-center justify-center gap-2 text-yellow-500"
-      >
-        Offers Loading...
-        <span>
-          <i class="fa-solid fa-screwdriver-wrench"></i>
-          <i class="fa-solid fa-person-digging"></i>
-        </span>
-      </h1>
+      <!-- Navbar -->
+
+      <nav class="bg-blue-50">
+        <div class="navbar max-w-5xl mx-auto">
+          <div class="navbar-start">
+            <!-- <div class="dropdown"></div> -->
+            <a
+              href="/"
+              class="text-xl text-blue-500 font-extrabold cursor-pointer"
+            >
+              SwiftCart
+            </a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>Home</a></li>
+              <li><a>Products</a></li>
+              <li><a>About</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <i
+              class="fa-solid fa-cart-shopping text-2xl p-3 text-blue-500 btn btn-ghost text-center items-center"
+            ></i>
+
+            <!-- Hidden navbar that will work for small device only -->
+            <div class="dropdown dropdown-bottom dropdown-end">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+
+              <ul
+                tabindex="-1"
+                class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+              >
+                <li><a>Home</a></li>
+                <li><a>Products</a></li>
+                <li><a>About</a></li>
+                <li><a>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
+
+    <script src="./script.js"></script>
   </body>
 </html>
