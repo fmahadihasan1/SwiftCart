@@ -40,7 +40,6 @@
       <nav class="bg-blue-50">
         <div class="navbar max-w-5xl mx-auto">
           <div class="navbar-start">
-            <!-- <div class="dropdown"></div> -->
             <a
               href="/"
               class="text-xl text-blue-500 font-extrabold cursor-pointer"
@@ -199,7 +198,7 @@
       <section>
         <div class="max-w-5xl mx-auto">
           <div class="mt-5">
-            <h2 class="text-3xl font-bold mb-5">
+            <h2 class="text-3xl font-bold mb-5 text-center sm:text-left">
               Trending Now <i class="fa-brands fa-gripfire text-yellow-400"></i
               ><i class="fa-brands fa-gripfire text-yellow-400"></i>
             </h2>
@@ -220,6 +219,69 @@
         </div>
       </section>
     </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-slate-700 text-gray-300">
+      <div
+        class="max-w-5xl mx-auto px-4 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10"
+      >
+        <div>
+          <a href="/" class="text-3xl text-blue-500 font-extrabold">
+            SwiftCart
+          </a>
+          <p class="mt-4 text-sm leading-relaxed">
+            Your one-stop shop for all your fashion and lifestyle needs. Quality
+            products, fast delivery, and unbeatable prices. Shop with confidence
+            at SwiftCart!
+          </p>
+        </div>
+
+        <div>
+          <h6 class="font-semibold mb-4 text-white">Quick Links</h6>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white transition">Home</a></li>
+            <li>
+              <a href="#" class="hover:text-white transition">Products</a>
+            </li>
+            <li><a href="#" class="hover:text-white transition">About</a></li>
+            <li><a href="#" class="hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h6 class="font-semibold mb-4 text-white">Support</h6>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+            <li>
+              <a href="#" class="hover:text-white transition">Shipping</a>
+            </li>
+            <li><a href="#" class="hover:text-white transition">Returns</a></li>
+            <li>
+              <a href="#" class="hover:text-white transition">Privacy Policy</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h6 class="font-semibold mb-4 text-white">
+            Subscribe to our Newsletter
+          </h6>
+          <p class="text-sm mb-4">
+            The latest news and updates sent to your inbox weekly.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-2">
+            <input
+              type="email"
+              placeholder="username@site.com"
+              class="input input-bordered w-full text-black flex-1"
+            />
+            <button class="btn btn-primary">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script src="./script.js"></script>
     <script src="./trending-products.js"></script>
   </body>
