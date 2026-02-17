@@ -48,12 +48,21 @@
             </a>
           </div>
           <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal mx-1 gap-2"></ul>
+            <ul class="menu menu-horizontal mx-1 gap-2">
+              <li><a href="#">Home</a></li>
+              <li><a href="#our-products">Products</a></li>
+              <li><a>About</a></li>
+              <li><a>Contact</a></li>
+            </ul>
           </div>
           <div class="navbar-end">
-            <i
-              class="fa-solid fa-cart-shopping text-2xl p-3 text-blue-500 btn btn-ghost text-center items-center"
-            ></i>
+            <div id="cart-items" class="indicator">
+              <button class="btn">
+                <i
+                  class="fa-solid fa-cart-shopping text-2xl p-3 text-blue-500 btn btn-ghost text-center items-center"
+                ></i>
+              </button>
+            </div>
 
             <!-- Hidden navbar that will work for small device only -->
             <div class="dropdown dropdown-bottom dropdown-end">
@@ -78,8 +87,8 @@
                 tabindex="-1"
                 class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
               >
-                <li><a>Home</a></li>
-                <li><a>Products</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#our-products">Products</a></li>
                 <li><a>About</a></li>
                 <li><a>Contact</a></li>
               </ul>
@@ -102,7 +111,7 @@
               Discover the latest trends in fashion, electronics, home
               essentials, and more. Shop with confidence and style at SwiftCart.
             </p>
-            <button class="btn btn-primary">Shop Now</button>
+            <a href="#our-products" class="btn btn-primary">Shop Now</a>
           </div>
         </div>
       </div>
@@ -211,19 +220,20 @@
             id="trending-products-container"
             class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2"
           ></div>
-          <div class="flex justify-center items-center">
+
+          <!-- <div class="flex justify-center items-center">
             <button class="btn btn-primary mt-5 text-white font-extrabold">
               More Products
               <i class="fa-solid fa-angles-right"></i>
             </button>
-          </div>
+          </div> -->
         </div>
       </section>
     </main>
 
     <!-- Our Products section -->
 
-    <section>
+    <section id="our-products">
       <div class="max-w-5xl mx-auto">
         <div class="mt-5">
           <h2 class="text-3xl font-bold mb-5 text-center sm:text-left">

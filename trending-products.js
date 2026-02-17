@@ -79,7 +79,7 @@ const displayTrendingProducts = (products) => {
            Details
         </button>
 
-        <button class="btn btn-primary text-white w-full btn-sm">
+        <button onclick="addToCart(${product.id})" class="btn btn-primary text-white w-full btn-sm">
         <i class="fa-solid fa-cart-shopping"></i>
           Add to Cart
         </button>

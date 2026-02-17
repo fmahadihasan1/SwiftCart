@@ -47,3 +47,25 @@ const displayProductDetails = (product) => {
     </div>
   `;
 };
+
+const cartItems = document.getElementById("cart-items");
+
+let cart = [];
+
+const addToCart = (productId) => {
+  const product = allProducts.find((p) => p.id === productId);
+
+  if (product) {
+    cart.push(product);
+    alert("Product added to the cart!");
+    if (cart.length > 0) {
+      const span = document.createElement("span");
+      span.className = "indicator-item badge badge-primary badge-sm";
+      span.innerText = cart.length;
+      cartItems.appendChild(span);
+    }
+  } else {
+    alert("Product not found!");
+  }
+  console.log(cart.length);
+};
