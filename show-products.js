@@ -9,7 +9,11 @@ const getProducts = async () => {
   const response = await fetch(productsUrl);
   const products = await response.json();
   displayProducts(products);
-  console.log(products[0]);
+  const trendingProducts = products.filter(
+    (product) => product.rating.rate >= 4.5,
+  );
+
+  displayTrendingProducts(trendingProducts.splice(0, 3));
 };
 
 // show products in normal
@@ -47,7 +51,9 @@ const displayProducts = (products) => {
         <p class="font-bold text-lg mt-2">$${product.price}</p>
 
         <div class="mt-auto grid grid-cols-2 gap-2">
-        <button class="btn btn-outline w-full btn-sm px-1 btn-xs"> 
+        <button 
+            onclick="openProductModal(${product.id})"
+            class="btn btn-outline w-full btn-sm px-1 btn-xs"> 
           <i class="fa-solid fa-eye"></i>
            Details
         </button>
