@@ -48,10 +48,7 @@
             </a>
           </div>
           <div class="navbar-center hidden lg:flex">
-            <ul
-              class="menu menu-horizontal mx-1 gap-2"
-              id="categories-container"
-            ></ul>
+            <ul class="menu menu-horizontal mx-1 gap-2"></ul>
           </div>
           <div class="navbar-end">
             <i
@@ -80,8 +77,12 @@
               <ul
                 tabindex="-1"
                 class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
-                id="categories-container-respnsive"
-              ></ul>
+              >
+                <li><a>Home</a></li>
+                <li><a>Products</a></li>
+                <li><a>About</a></li>
+                <li><a>Contact</a></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -228,7 +229,21 @@
           <h2 class="text-3xl font-bold mb-5 text-center sm:text-left">
             Our Products
           </h2>
+          <div class="max-w-5xl w-full mx-auto">
+            <ul
+              id="categories-container"
+              class="menu menu-horizontal flex flex-wrap justify-center gap-3 bg-base-100 w-full px-2 py-2"
+            >
+              <li
+                class="bg-gray-100 rounded-lg px-4 py-2 font-semibold transition duration-300 hover:bg-indigo-500 hover:text-white cursor-pointer"
+              >
+                <a class="capitalize">All</a>
+              </li>
+            </ul>
+          </div>
         </div>
+
+        <!-- Categories -->
 
         <!-- Best Products -->
 

@@ -7,7 +7,7 @@ const getCategories = async () => {
   const categories = await response.json();
 
   displayCategories(categories);
-  displayCategoriesResponsive(categories);
+  // displayCategoriesResponsive(categories);
 };
 
 // show categories in normal
@@ -17,17 +17,16 @@ const displayCategories = (categories) => {
   categories.forEach((category) => {
     const categoryElement = document.createElement("li");
     categoryElement.classList.add(
-      "hover:bg-blue-100",
-
+      "bg-gray-100",
       "rounded-lg",
-      "px-2",
-      "font-bold",
-
+      "px-4",
+      "py-2",
+      "font-semibold",
       "transition",
-      "duration-500",
-      "ease-out",
+      "duration-300",
       "hover:bg-indigo-500",
       "hover:text-white",
+      "cursor-pointer",
     );
 
     categoryElement.innerHTML = `<a class="capitalize">${category}</a>`;
@@ -36,16 +35,16 @@ const displayCategories = (categories) => {
 };
 
 // show categories in responsive
-const displayCategoriesResponsive = (categories) => {
-  const liContainerResponsive = document.getElementById(
-    "categories-container-respnsive",
-  );
-  categories.forEach((category) => {
-    const categoryElement = document.createElement("li");
+// const displayCategoriesResponsive = (categories) => {
+//   const liContainerResponsive = document.getElementById(
+//     "categories-container-respnsive",
+//   );
+//   categories.forEach((category) => {
+//     const categoryElement = document.createElement("li");
 
-    categoryElement.innerHTML = `<a class="capitalize">${category}</a>`;
-    liContainerResponsive.appendChild(categoryElement);
-  });
-};
+//     categoryElement.innerHTML = `<a class="capitalize">${category}</a>`;
+//     liContainerResponsive.appendChild(categoryElement);
+//   });
+// };
 
 getCategories();
