@@ -28,8 +28,16 @@ const displayCategories = (categories) => {
       "hover:text-white",
       "cursor-pointer",
     );
+    const a = document.createElement("a");
+    a.className = "capitalize";
+    a.innerText = category;
 
-    categoryElement.innerHTML = `<a class="capitalize">${category}</a>`;
+    a.addEventListener("click", () => {
+      filterByCategory(category);
+    });
+
+    categoryElement.appendChild(a);
+
     liContainer.appendChild(categoryElement);
   });
 };

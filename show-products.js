@@ -4,15 +4,18 @@ const productsUrl = "https://fakestoreapi.com/products";
 
 const allProductsContainer = document.getElementById("all-products-container");
 
+let allProducts = [];
+
 // fetch products from api and display them in the page
 const getProducts = async () => {
   const response = await fetch(productsUrl);
   const products = await response.json();
   displayProducts(products);
+  allProducts = products;
+
   const trendingProducts = products.filter(
     (product) => product.rating.rate >= 4.5,
   );
-
   displayTrendingProducts(trendingProducts.splice(0, 3));
 };
 
@@ -68,6 +71,18 @@ const displayProducts = (products) => {
     `;
 
     allProductsContainer.appendChild(card);
+  }
+};
+
+const filterByCategory = (category) => {
+  if (category === "all") {
+    displayProducts(allProducts);
+  } else {
+    const filteredProducts = allProducts.filter(
+      (product) => product.category === category,
+    );
+
+    displayProducts(filteredProducts);
   }
 };
 
