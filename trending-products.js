@@ -58,21 +58,24 @@ const displayTrendingProducts = (products) => {
 
   <div class="card-body flex flex-col flex-grow">
     
-    <h4 class="flex justify-between">
-      <span>${product.category}</span>
+    <h4 class="flex justify-between text-xs">
+      <span class="badge badge-outline badge-primary bg-purple-50 font-bold">${product.category}</span>
       <span>
         <i class="fa-solid fa-star text-yellow-500"></i>
         ${product.rating} (${product.reviews})
       </span>
     </h4>
-
-    <h3 class="card-title">${product.title}</h3>
-    <h4 class="font-bold">$${product.price}</h4>
+    
+    <div class="my-3">
+      <h3 class="card-title">${product.title}</h3>
+      <h4 class="font-bold">$${product.price}</h4>
+    </div>
 
     <div class="mt-auto">
       <div class="grid grid-cols-2 gap-2 w-full">
-        <button class="btn btn-outline w-full">Details</button>
+        <button class="btn btn-outline w-full"> <i class="fa-solid fa-eye"></i> Details</button>
         <button class="btn btn-primary text-white w-full">
+        <i class="fa-solid fa-cart-shopping"></i>
           Add to Cart
         </button>
       </div>
